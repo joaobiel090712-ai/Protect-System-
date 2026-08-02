@@ -30,13 +30,12 @@ client.on("messageCreate", async (message) => {
 
   if (message.content === "!antiraid") {
     message.reply({
-      content:
-`🛡️ **Protect System AntiRaid**
+      content: `🛡️ **Protect System AntiRaid**
 
 ✅ Sistema ativado
 🤖 Anti Bot: ON
 🔒 Segurança: ON
-📝 Logs: ON`
+📄 Logs: ON`
     });
   }
 });
