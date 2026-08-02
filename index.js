@@ -17,10 +17,10 @@ client.once("ready", () => {
 client.on("guildMemberAdd", async (member) => {
   if (member.user.bot) {
     try {
-      await member.kick("Bot bloqueado pelo AntiRaid");
+      await member.kick("Bot bloqueado pelo Protect System");
       console.log(`🤖 Bot removido: ${member.user.tag}`);
     } catch (err) {
-      console.log("Erro ao remover bot:", err);
+      console.log(err);
     }
   }
 });
@@ -29,14 +29,14 @@ client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
 
   if (message.content === "!antiraid") {
-    message.reply({
-      content: `🛡️ **Protect System AntiRaid**
+    message.reply(`
+🛡️ **Protect System AntiRaid**
 
-✅ Sistema ativado
+✅ Sistema: Ativado
 🤖 Anti Bot: ON
 🔒 Segurança: ON
-📄 Logs: ON`
-    });
+📄 Logs: ON
+`);
   }
 });
 
