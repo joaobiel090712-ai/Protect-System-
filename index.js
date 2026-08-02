@@ -28,7 +28,7 @@ client.on("guildMemberAdd", async (member) => {
 client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
 
-  if (message.content === "!antiraid") {
+  if (message.content === "!aa") {
     message.reply(`
 🛡️ **Protect System AntiRaid**
 
